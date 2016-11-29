@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.alpha.alphafitness.ProfileScreen">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Hillary Clinton"
+        android:textSize="20dp"
+        android:ems="10"
+        android:id="@+id/username"
+        android:layout_alignTop="@+id/userimage"
+        android:layout_toEndOf="@+id/userimage"
+        android:layout_marginStart="18dp"
+        android:layout_alignBottom="@+id/userimage" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/userprofileimg"
+        android:scaleType="centerInside"
+        android:id="@+id/userimage"
+        android:layout_marginStart="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Height: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:id="@+id/heightlabel"
+        android:layout_below="@+id/username"
+        android:layout_toEndOf="@+id/userimage" />
+
+    <TextView
+        android:text="Weight: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_alignEnd="@+id/username"
+        android:layout_marginEnd="69dp"
+        android:id="@+id/weightlabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="5'7"
+        android:textSize="15dp"
+        android:ems="10"
+        android:id="@+id/heightvalue"
+        android:layout_alignBaseline="@+id/heightlabel"
+        android:layout_alignBottom="@+id/heightlabel"
+        android:layout_toEndOf="@+id/heightlabel" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="130 lb"
+        android:textSize="15dp"
+        android:ems="5"
+        android:id="@+id/weightvalue"
+
+        android:layout_alignBaseline="@+id/weightlabel"
+        android:layout_alignBottom="@+id/weightlabel"
+        android:layout_alignStart="@+id/weightlabel"
+        android:layout_marginStart="58dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightvalue"
+        android:layout_alignParentStart="true"
+        android:id="@+id/avgweeklylabel"
+        android:layout_alignParentEnd="true"
+        android:text="Average/Weekly"
+        android:background="@color/gray"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="Distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avgweeklylabel"
+        android:layout_alignParentStart="true"
+        android:id="@+id/distancelabel2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_alignEnd="@+id/weightlabel" />
+
+    <TextView
+        android:text="0 KM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:id="@+id/distanceValue"
+        android:layout_below="@+id/avgweeklylabel"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/distancelabel2"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp" />
+
+    <TextView
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distancelabel2"
+        android:layout_alignParentStart="true"
+        android:id="@+id/timeLabel"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_alignEnd="@+id/weightlabel" />
+
+    <TextView
+        android:text="0 Mins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:id="@+id/timeValue"
+        android:layout_below="@+id/distanceValue"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/timeLabel"
+        android:textSize="17sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_alignStart="@+id/weightlabel" />
+
+    <TextView
+        android:text="Workouts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeLabel"
+        android:layout_alignParentStart="true"
+        android:id="@+id/workoutLabel"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_alignEnd="@+id/weightlabel" />
+
+    <TextView
+        android:text="0 times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:id="@+id/workoutValue"
+        android:layout_below="@+id/timeValue"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/workoutLabel"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp" />
+
+    <TextView
+        android:text="Calories Burned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/workoutLabel"
+        android:layout_alignParentStart="true"
+        android:id="@+id/caloriesBurnLabel"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_alignEnd="@+id/workoutLabel" />
+
+    <TextView
+        android:text="0 Cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:id="@+id/caloriesBurnValue"
+        android:layout_below="@+id/workoutValue"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/caloriesBurnLabel"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/caloriesBurnLabel"
+        android:layout_alignParentStart="true"
+        android:id="@+id/alltimeLabel"
+        android:layout_alignParentEnd="true"
+        android:text="All Time"
+        android:background="@color/gray"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="Distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alltimeLabel"
+        android:layout_alignParentStart="true"
+        android:id="@+id/distancelabel3"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_alignEnd="@+id/weightlabel" />
+
+    <TextView
+        android:text="38.6 KM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:id="@+id/distanceValue2"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/distancelabel3"
+        android:textSize="15sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_below="@+id/alltimeLabel" />
+
+    <TextView
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distancelabel3"
+        android:layout_alignParentStart="true"
+        android:id="@+id/timeLabel2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_alignEnd="@+id/weightlabel" />
+
+    <TextView
+        android:text="34 Mins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:id="@+id/timeValue2"
+        android:layout_below="@+id/distanceValue2"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/timeLabel2"
+        android:textSize="17sp"
+        android:lineSpacingExtra="5sp" />
+
+    <TextView
+        android:text="Workouts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeLabel2"
+        android:layout_alignParentStart="true"
+        android:id="@+id/workoutLabel2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_alignEnd="@+id/weightlabel" />
+
+    <TextView
+        android:text="3 times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:id="@+id/workoutValue2"
+        android:layout_below="@+id/timeValue2"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/workoutLabel2"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp" />
+
+    <TextView
+        android:text="Calories Burned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/workoutLabel2"
+        android:layout_alignParentStart="true"
+        android:id="@+id/caloriesBurnLabel2"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp"
+        android:layout_alignEnd="@+id/workoutLabel2" />
+
+    <TextView
+        android:text="187 Cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+
+        android:id="@+id/caloriesBurnValue2"
+        android:layout_below="@+id/workoutValue2"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/caloriesBurnLabel2"
+        android:textSize="18sp"
+        android:lineSpacingExtra="5sp" />
+
+    </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

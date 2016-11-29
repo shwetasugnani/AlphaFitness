@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AlphaFitness</string>
+    <string name="google_maps_api_key">AIzaSyDopGNXtyWMRlnLE-x3FUk6-McDc8RtfBg</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

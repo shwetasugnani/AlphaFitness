@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alpha.alphafitness.VerticalFragment">
+    <TextView
+        android:text="Record Activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="24dp"
+        android:id="@+id/recordactivitylabel"
+        android:textColor="@color/black"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="DISTANCE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distancelabel"
+        android:layout_below="@+id/userimagebutton"
+        android:textStyle="bold"
+        android:layout_alignStart="@+id/recordactivitylabel" />
+
+    <TextView
+        android:text="DURATION"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/durationlabel"
+        android:textStyle="bold"
+        android:layout_below="@+id/userimagebutton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="KM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distancelabel"
+        android:textStyle="bold"
+        android:layout_marginTop="38dp"
+
+        android:id="@+id/KMlabel"
+        android:layout_alignStart="@+id/distancelabel" />
+
+    <TextView
+        android:text="Minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minutesLabel"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/KMlabel"
+        android:layout_alignBottom="@+id/KMlabel"
+        android:layout_alignStart="@+id/durationlabel" />
+
+    <TextView
+        android:text="0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/distance"
+        android:textSize="10pt"
+        android:layout_above="@+id/minutesLabel"
+        android:layout_alignStart="@+id/KMlabel"
+        android:layout_marginBottom="11dp" />
+
+    <TextView
+        android:text="00:00:00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/distance"
+        android:textSize="10pt"
+        android:layout_alignStart="@+id/minutesLabel"
+        android:id="@+id/time" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/KMlabel"
+        android:layout_alignStart="@+id/KMlabel"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/startbutton">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.MapFragment"/>
+    </FrameLayout>
+
+    <Button
+        android:text="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startbutton"
+        android:background="@color/green"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp" />
+
+    <ImageButton
+        android:layout_width="75dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/userprofileimg"
+        android:scaleType="centerInside"
+        android:id="@+id/userimagebutton"
+        android:layout_marginEnd="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        />
+    </RelativeLayout>
